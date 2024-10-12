@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/Javascript/DOM Manipulation.md",
+                "file": "Programming/Javascript/Async Programming.md",
                 "mode": "source",
                 "source": false
               }
@@ -190,10 +190,25 @@
   },
   "active": "0a17e93c09c9b8ce",
   "lastOpenFiles": [
-    "Programming/Javascript/JavaScript Advanced Concepts.md",
+    "Programming/Javascript/Event Loop.md",
+    "Programming/Javascript/Events.md",
+    "Programming/Javascript/Fetch API.md",
+    "Programming/Javascript/Modules.md",
+    "Programming/Javascript/Error Handling.md",
+    "Programming/Javascript/Data Structures.md",
+    "Programming/Javascript/ES6.md",
+    "Programming/Javascript/Best Practices.md",
+    "Programming/Javascript/Performance Optimization.md",
+    "Programming/Javascript/Design Patterns.md",
+    "Programming/Javascript/Advanced Concepts.md",
+    "Programming/Javascript/Async Programming.md",
     "Programming/Javascript/DOM Manipulation.md",
-    "Programming/Javascript/Asynchronous JavaScript.md",
+    "Programming/Javascript/Promises.md",
+    "Programming/Javascript/Callbacks.md",
+    "Programming/Javascript/Async-Await.md",
     "Programming/Javascript/Objects and Object-Oriented Programming.md",
+    "Programming/Javascript/JavaScript Advanced Concepts.md",
+    "Programming/Javascript/Asynchronous JavaScript.md",
     "Programming/Javascript/Control Flow and Loops.md",
     "Programming/Javascript/Javascript Fundamentals.md",
     "Programming/Javascript/template.md",
