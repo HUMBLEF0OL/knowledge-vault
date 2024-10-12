@@ -7,7 +7,7 @@ Title: Introduction to Javascript
 References:
   - https://developer.mozilla.org/en-US
 ---
-### Section 6: **JavaScript Advanced Concepts**
+st### Section 6: **JavaScript Advanced Concepts**
 
 In this section, we will cover more advanced JavaScript concepts that enhance your understanding of the language and improve your coding skills.
 
