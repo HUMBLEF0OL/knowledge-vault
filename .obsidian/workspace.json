@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/Javascript/Objects and Object-Oriented Programming.md",
+                "file": "Programming/Javascript/3. Objects and Object-Oriented Programming.md",
                 "mode": "source",
                 "source": false
               }
@@ -30,29 +30,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "f688cb4f4a409208",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming/Javascript/Async Programming.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0a17e93c09c9b8ce",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -71,7 +51,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "byCreatedTimeReverse"
               }
             }
           },
@@ -118,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Programming/Javascript/Asynchronous JavaScript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Programming/Javascript/Asynchronous JavaScript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Programming/Javascript/Asynchronous JavaScript.md"
+              }
             }
           },
           {
@@ -188,15 +172,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "0a17e93c09c9b8ce",
+  "active": "e938f9e1fce9a16e",
   "lastOpenFiles": [
+    "Programming/Javascript/3. Objects and Object-Oriented Programming.md",
+    "Programming/Javascript/1. Javascript Fundamentals.md",
+    "Programming/Javascript/2. Control Flow and Loops.md",
+    "Programming/Javascript/Prototypes.md",
+    "Programming/Javascript/Asynchronous JavaScript.md",
+    "Programming/Javascript/Temporal Dead Zone.md",
     "Data Structures and Algorithm/LinkedList.md",
     "Templates/NotesTemplate.md",
     "Data Structures and Algorithm/Stack.md",
     "Data Structures and Algorithm/test.md",
     "Templates",
     "Programming/Javascript/ES6.md",
-    "Programming/Javascript/Untitled.md",
     "Programming/Javascript/Advanced Concepts.md",
     "Data Structures and Algorithm",
     "Programming/Javascript/Event Loop.md",
@@ -213,11 +202,6 @@
     "Programming/Javascript/Promises.md",
     "Programming/Javascript/Callbacks.md",
     "Programming/Javascript/Async-Await.md",
-    "Programming/Javascript/Objects and Object-Oriented Programming.md",
-    "Programming/Javascript/JavaScript Advanced Concepts.md",
-    "Programming/Javascript/Asynchronous JavaScript.md",
-    "Programming/Javascript/Control Flow and Loops.md",
-    "Programming/Javascript/Javascript Fundamentals.md",
     "Programming/Javascript",
     "Programming"
   ]
