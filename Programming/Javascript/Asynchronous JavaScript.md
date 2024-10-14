@@ -9,6 +9,8 @@ References:
 ---
 ### Section 4: **Asynchronous JavaScript**
 
+test commit
+
 Asynchronous programming allows JavaScript to handle operations like network requests, file reading, or timers without blocking the main execution thread. This is crucial for building responsive web applications.
 
 #### 4.1 Callbacks
