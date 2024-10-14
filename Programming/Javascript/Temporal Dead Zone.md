@@ -1,6 +1,5 @@
 ---
 tags:
-  - Programming
   - Javascript
 Date: 2024-10-13
 Title: Temporal Dead Zone

@@ -26,6 +26,96 @@ An event is an occurrence that can be detected by the browser, such as a user cl
 - [JavaScript.info Introduction to Events](https://javascript.info/introduction-browser-events)
 
 ---
+####  Event Handling
+
+JavaScript can listen for events and respond when they occur. This is crucial for interactivity in web applications.
+
+##### Adding an Event Listener:
+```javascript
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+    alert("Button clicked!");
+});
+```
+
+##### Removing an Event Listener:
+```javascript
+const handleClick = () => {
+    alert("Button clicked!");
+};
+
+button.addEventListener("click", handleClick);
+// To remove the event listener
+button.removeEventListener("click", handleClick);
+```
+
+**Event Object**:
+The event object provides information about the event that occurred.
+
+```javascript
+button.addEventListener("click", (event) => {
+    console.log(event.target); // The element that triggered the event
+});
+```
+
+
+---
+
+#### 5.5 Event Bubbling and Capturing
+
+Events in the DOM can bubble up from the target element to its parents or be captured from the parent to the target.
+
+- **Bubbling**: The event starts from the target element and propagates upward.
+- **Capturing**: The event starts from the root and goes down to the target element.
+
+##### Example of Event Bubbling:
+```javascript
+document.querySelector("ul").addEventListener("click", () => {
+    console.log("List clicked!");
+});
+
+document.querySelector("li").addEventListener("click", (event) => {
+    console.log("Item clicked!");
+    event.stopPropagation(); // Prevents further propagation
+});
+```
+
+The default event propagation mechanism in JavaScript is **event bubbling**.
+
+
+*To use event capturing in JavaScript, you can set up an event listener with the `useCapture` parameter set to `true`.* This tells the browser to handle the event in the capturing phase.
+
+Here’s a step-by-step example:
+
+1. **HTML Structure:**
+   ```html
+   <div id="parent">
+       <button id="child">Click Me</button>
+   </div>
+   ```
+
+2. **JavaScript Code:**
+   ```javascript
+   const parent = document.getElementById('parent');
+   const child = document.getElementById('child');
+
+   // Event listener on the parent for capturing
+   parent.addEventListener('click', () => {
+       console.log('Parent clicked (capturing)');
+   }, true); // 'true' indicates capturing phase
+
+   // Event listener on the child
+   child.addEventListener('click', () => {
+       console.log('Child clicked');
+   });
+   ```
+
+### How It Works:
+- When the button is clicked, the event goes through the capturing phase first, triggering the parent's event listener before the child's. The console output would be:
+  ```
+  Parent clicked (capturing)
+  Child clicked
+  ```
 
 #### 20.2 Adding Event Listeners
 
