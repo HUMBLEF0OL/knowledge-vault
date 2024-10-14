@@ -11,24 +11,8 @@
             "id": "adf322597fe1f565",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming/Javascript/Design Patterns.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4cc9305a38fc7382",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming/Javascript/Index.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -61,7 +45,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -97,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming/Javascript/Design Patterns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Programming/Javascript/Design Patterns.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Programming/Javascript/Design Patterns.md"
-              }
+              "state": {}
             }
           },
           {
@@ -150,7 +130,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -173,35 +153,35 @@
   },
   "active": "adf322597fe1f565",
   "lastOpenFiles": [
-    "Programming/Javascript/Data Structures.md",
-    "Programming/Javascript/Callbacks.md",
-    "Programming/Javascript/Best Practices.md",
-    "Programming/Javascript/Async-Await.md",
+    "Data Structures and Algorithm/Trie.md",
+    "Data Structures and Algorithm/Generic Tree.md",
+    "Data Structures and Algorithm/Binary Search Tree.md",
+    "Data Structures and Algorithm/Binary Tree.md",
+    "Data Structures and Algorithm/Tree.md",
+    "Data Structures and Algorithm/Queue.md",
+    "Data Structures and Algorithm/Stack.md",
+    "Data Structures and Algorithm/LinkedList.md",
+    "Data Structures and Algorithm/Untitled",
+    "Programming/Javascript/3. Objects and Object-Oriented Programming.md",
+    "Programming/Javascript/Asynchronous JavaScript.md",
     "Programming/Javascript/Scope in Javascript.md",
     "Programming/Javascript/Index.md",
-    "Programming/Javascript/Temporal Dead Zone.md",
-    "Programming/Javascript/Prototypes.md",
-    "Programming/Javascript/Promises.md",
-    "Programming/Javascript/Performance Optimization.md",
-    "Programming/Javascript/Modules.md",
-    "Programming/Javascript/JavaScript Advanced Concepts.md",
-    "Programming/Javascript/Fetch API.md",
-    "Programming/Javascript/Event Loop.md",
-    "Programming/Javascript/Error Handling.md",
-    "Programming/Javascript/4. Asynchronous JavaScript.md",
-    "Programming/Javascript/ES6.md",
-    "Programming/Javascript/Design Patterns.md",
-    "Programming/Javascript/1. Javascript Fundamentals.md",
-    "Programming/Javascript/2. Control Flow and Loops.md",
-    "Programming/Javascript/3. Objects and Object-Oriented Programming.md",
     "Programming/Javascript/6. Advanced Concepts.md",
     "Programming/Javascript/5. DOM Manipulation.md",
-    "Programming/Javascript/Events.md",
-    "Async/Await.md",
-    "Async",
-    "Programming/Javascript/4. Async Programming.md",
+    "Programming/Javascript/4. Asynchronous JavaScript.md",
+    "Programming/Javascript/1. Javascript Fundamentals.md",
+    "Programming/Javascript/2. Control Flow and Loops.md",
+    "Programming/Javascript/Prototypes.md",
+    "Programming/Javascript/Temporal Dead Zone.md",
+    "Templates/NotesTemplate.md",
+    "Data Structures and Algorithm/test.md",
     "Templates",
+    "Programming/Javascript/ES6.md",
+    "Programming/Javascript/Advanced Concepts.md",
     "Data Structures and Algorithm",
+    "Programming/Javascript/Event Loop.md",
+    "Programming/Javascript/Events.md",
+    "Programming/Javascript/Fetch API.md",
     "Programming/Javascript",
     "Programming"
   ]
