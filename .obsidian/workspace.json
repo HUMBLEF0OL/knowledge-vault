@@ -147,11 +147,10 @@
       "obsidian-git:Open Git source control": false,
       "obsidian-importer:Open Importer": false,
       "obisidian-note-linker:Note Linker": false,
-      "templater-obsidian:Templater": false,
-      "terminal:Open terminal": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "822a9bbc9e37606d",
+  "active": "adf322597fe1f565",
   "lastOpenFiles": [
     "Data Structures and Algorithm/Trie.md",
     "Data Structures and Algorithm/Generic Tree.md",
