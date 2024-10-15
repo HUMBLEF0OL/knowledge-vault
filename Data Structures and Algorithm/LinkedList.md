@@ -1,6 +1,6 @@
 ---
 tags:
-  - DataStructure
+  - Data-Structure
 Date: 2024-10-12
 Title: Linked List
 References:
