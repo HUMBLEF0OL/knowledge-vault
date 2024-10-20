@@ -2815,7 +2815,7 @@ class ParentComponent extends React.Component {
 
      The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows:
 
-     ![flux](images/flux.png)
+     ![flux](flux.png.md)
 
 **[⬆ Back to Top](#table-of-contents)**
 

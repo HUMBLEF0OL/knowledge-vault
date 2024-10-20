@@ -75,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "flux.pn",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -202,6 +202,7 @@
   },
   "active": "442d7e274fa31d0b",
   "lastOpenFiles": [
+    "Interview/React.js.md",
     "Interview/React/Core React.md",
     "reconciliation.md",
     "assets/images/vdom3.png",
@@ -209,12 +210,11 @@
     "assets/images/vdom1.png",
     "assets/images/react-state.jpg",
     "assets/images",
-    "Interview/React.js.md",
     "higher order.md",
     "Programming/ReactJs/Server Side Rendering.md",
     "assets",
     "Interview/Misc/SPA vs MPA.md",
-    "images/flux.png.md",
+    "assets/images/flux.png.md",
     "images",
     "Programming/ReactJs",
     "Interview/Misc",
