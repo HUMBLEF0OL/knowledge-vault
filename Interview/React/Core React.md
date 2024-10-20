@@ -393,12 +393,11 @@ References:
 
     3. In HTML, you need to invoke the function by appending `()`
        Whereas in react you should not append `()` with the function name. (refer "activateLasers" function in the first point for example)
-
-    
+---
 
 13. ### What are synthetic events in React?
 
-    `SyntheticEvent` is a cross-browser wrapper around the browser's native event. Its API is same as the browser's native event, including `stopPropagation()` and `preventDefault()`, except the events work identically across all browsers. The native events can be accessed directly from synthetic events using `nativeEvent` attribute.
+    `SyntheticEvent` is a cross-browser wrapper around the browser's native event. Its API is same as the browser's native event. They are part of the React event system, which is designed to be consistent across all browsers, ensuring that event handling works the same way regardless of the environment.
 
     Let's take an example of BookStore title search component with the ability to get all native event properties
 
@@ -416,8 +415,7 @@ References:
       return <input name="title" onChange={handleTitleChange} />;
     }
     ```
-
-    
+---
 
 14. ### What are inline conditional expressions?
 
@@ -433,12 +431,11 @@ References:
       );
     }
     ```
-
-    
+---
 
 15. ### What is "key" prop and what is the benefit of using it in arrays of elements?
 
-    A `key` is a special attribute you **should** include when mapping over arrays to render data. _Key_ prop helps React identify which items have changed, are added, or are removed.
+    The **`key`** prop in React is a special attribute used when rendering arrays of elements. It helps React identify which elements have changed, been added, or removed. This is especially important when React re-renders lists of items because it allows React to optimize the update process and avoid unnecessary re-rendering of unchanged elements.
 
     Keys should be unique among its siblings. Most often we use ID from our data as _key_:
 
@@ -462,13 +459,13 @@ References:
     4. The key attribute accepts either string or number and internally convert it as string type.
     5. Don't generate the key on the fly something like `key={Math.random()}`. Because the keys will never match up between re-renders and DOM created everytime.
 
-    
+---
 
 16. ### What is Virtual DOM?
 
-    The _Virtual DOM_ (VDOM) is an in-memory representation of _Real DOM_. The representation of a UI is kept in memory and synced with the "real" DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called _reconciliation_.
+    The _Virtual DOM_ (VDOM) is an in-memory representation of _Real DOM_. The representation of a UI is kept in memory and synced with the "real" DOM. ==It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called _reconciliation_.==
 
-    
+---
 
 17. ### How Virtual DOM works?
 
@@ -486,23 +483,23 @@ References:
 
        ![vdom3](images/vdom3.png)
 
-    
+---
 
 18. ### What is the difference between Shadow DOM and Virtual DOM?
 
     The _Shadow DOM_ is a browser technology designed primarily for scoping variables and CSS in _web components_. The _Virtual DOM_ is a concept implemented by libraries in JavaScript on top of browser APIs.
 
-    
+---
 
 19. ### What is React Fiber?
 
     Fiber is the new _reconciliation_ engine or reimplementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives.
 
-    
+---
 
 20. ### What is the main goal of React Fiber?
 
-    The goal of _React Fiber_ is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is **incremental rendering**: the ability to split rendering work into chunks and spread it out over multiple frames.
+    The goal of _React Fiber_ is to increase its suitability for areas like animation, layout, and gestures. Its headline feature ==is **incremental rendering**:== the ability to split rendering work into chunks and spread it out over multiple frames.
 
     _from documentation_
 
@@ -518,7 +515,7 @@ References:
 
 21. ### What are controlled components?
 
-    A component that controls the input elements within the forms on subsequent user input is called **Controlled Component**, i.e, every state mutation will have an associated handler function. That means, the displayed data is always in sync with the state of the component.
+    In React, **controlled components** are form elements (like `<input>`, `<textarea>`, etc.) where the value is controlled by the component’s state. The input value is derived from the state, and any change is handled by updating the state through an `onChange` handler. This ensures the form input always reflects the React state, providing a "single source of truth" for form data and enabling easier validation and management.
 
     The controlled components will be implemented using the below steps,
 
@@ -550,7 +547,7 @@ References:
     }
     ```
 
-    
+---
 
 22. ### What are uncontrolled components?
 
@@ -588,123 +585,173 @@ References:
     ```
 
     In most cases, it's recommend to use controlled components to implement forms. In a controlled component, form data is handled by a React component. The alternative is uncontrolled components, where form data is handled by the DOM itself.
+| Feature                 | Controlled Components                               | Uncontrolled Components                          |
+|-------------------------|----------------------------------------------------|-------------------------------------------------|
+| Value Management        | Managed by React state                             | Managed by the DOM                              |
+| Updates                 | Requires `onChange` handler to update state        | Value accessed through `ref`                    |
+| State Synchronization   | Always in sync with React state                    | Not automatically synced with state             |
+| Use Case                | Ideal for validation and complex form logic        | Simpler for basic forms without validation      |
+| Example                 | `<input value={state} onChange={handleChange} />`  | `<input ref={inputRef} />`                      |
 
-    <details><summary><b>See Class</b></summary>
-    <p>
 
-    ```jsx harmony
-    class UserProfile extends React.Component {
-      constructor(props) {
-        super(props);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.input = React.createRef();
-      }
-
-      handleSubmit(event) {
-        alert("A name was submitted: " + this.input.current.value);
-        event.preventDefault();
-      }
-
-      render() {
-        return (
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              {"Name:"}
-              <input type="text" ref={this.input} />
-            </label>
-            <input type="submit" value="Submit" />
-          </form>
-        );
-      }
-    }
-    ```
-
-    </p>
-    </details>
-
-    
+---
 
 23. ### What is the difference between createElement and cloneElement?
 
-    JSX elements will be transpiled to `React.createElement()` functions to create React elements which are going to be used for the object representation of UI. Whereas `cloneElement` is used to clone an element and pass it new props.
+	| Feature                     | `React.createElement`                                     | `React.cloneElement`                                       |
+	|-----------------------------|----------------------------------------------------------|------------------------------------------------------------|
+	| Purpose                     | Creates a new React element from scratch.                | Clones an existing React element and allows modifications.  |
+	| Parameters                  | Type (component/tag), props, and children.               | Existing element, new props (optional), and new children.   |
+	| Use Case                    | Used to create any React element in JSX or JavaScript.    | Used to clone elements, often modifying props or children.  |
+	| Example                     | `React.createElement('div', { className: 'box' }, 'Text')` | `React.cloneElement(element, { className: 'new-class' })`   |
+	| JSX Equivalent              | `<div className="box">Text</div>`                         | Cloning isn’t directly available in JSX, must use JS.       |
+	
+	**`createElement`** is for creating new elements, while **`cloneElement`** is for copying and modifying existing ones.
 
-    
+---
 
 24. ### What is Lifting State Up in React?
 
-    When several components need to share the same changing data then it is recommended to _lift the shared state up_ to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
+    **Lifting State Up** in React is a pattern where you move the shared state to a common ancestor component, allowing sibling components to share and sync data through that parent.
+	
+	Why Use It?
+	When multiple components need to share data, lifting the state to their closest common parent ensures that all components have access to the same state and can update it consistently.
+	
+	Example:
+	
+	```jsx
+	function Parent() {
+	  const [sharedValue, setSharedValue] = useState('');
+	
+	  return (
+	    <div>
+	      <ChildA value={sharedValue} onChange={setSharedValue} />
+	      <ChildB value={sharedValue} />
+	    </div>
+	  );
+	}
+	
+	function ChildA({ value, onChange }) {
+	  return <input value={value} onChange={(e) => onChange(e.target.value)} />;
+	}
+	
+	function ChildB({ value }) {
+	  return <p>{value}</p>;
+	}
+	```
+	
+	Here, the state (`sharedValue`) is lifted up to the `Parent` component, so both `ChildA` and `ChildB` can access and update it.
 
-    
+---
 
 25. ### What are Higher-Order Components?
 
-    A _higher-order component_ (_HOC_) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
+    **Higher-Order Components (HOCs)** in React are functions that take a component as an argument and return a new component with enhanced functionality. They allow you to reuse component logic and share behavior across multiple components.
 
-    We call them **pure components** because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components.
+	Key Points:
+	- HOCs don’t modify the original component but wrap it in a new one.
+	- Commonly used for cross-cutting concerns like adding authentication, logging, or data fetching.
+	- They follow the pattern: `const EnhancedComponent = higherOrderComponent(WrappedComponent)`.
+	
+	### Example:
+	
+	```jsx
+	import React, { useState, useEffect } from 'react';
+	
+	// UserProfile component to display user data
+	function UserProfile({ user }) {
+	  return (
+	    <div>
+	      <h2>{user.name}</h2>
+	      <p>Email: {user.email}</p>
+	    </div>
+	  );
+	}
+	
+	// HOC to handle loading spinner
+	function withLoadingSpinner(Component) {
+	  return function EnhancedComponent({ isLoading, ...props }) {
+	    if (isLoading) {
+	      return <div>Loading...</div>;  // Show loading spinner when isLoading is true
+	    }
+	    return <Component {...props} />;  // Render the original component when isLoading is false
+	  };
+	}
+	
+	// Wrapping UserProfile with the HOC
+	const UserProfileWithSpinner = withLoadingSpinner(UserProfile);
+	
+	// Parent component simulating an API call to fetch data
+	function App() {
+	  const [isLoading, setIsLoading] = useState(true);
+	  const [user, setUser] = useState(null);
+	
+	  useEffect(() => {
+	    // Simulate API call with a 2-second delay
+	    setTimeout(() => {
+	      setUser({ name: 'John Doe', email: 'john.doe@example.com' });
+	      setIsLoading(false);  // Stop loading once data is fetched
+	    }, 2000);
+	  }, []);
+	
+	  return (
+	    <div>
+	      {/* Pass isLoading and user as props to the enhanced component */}
+	      <UserProfileWithSpinner isLoading={isLoading} user={user} />
+	    </div>
+	  );
+	}
+	
+	export default App;
 
-    ```javascript
-    const EnhancedComponent = higherOrderComponent(WrappedComponent);
-    ```
+	```
+	
+	Here, `withLoadingSpinner` is an HOC that adds loading behavior to `MyComponent` without altering its original logic.
 
-    HOC can be used for many use cases:
-
-    1. Code reuse, logic and bootstrap abstraction.
-    2. Render hijacking.
-    3. State abstraction and manipulation.
-    4. Props manipulation.
-
-    
+---
 
 26. ### What is children prop?
-
-    _Children_ is a prop that allows you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as `children` prop.
-
-    A simple usage of children prop looks as below,
-
-    ```jsx harmony
-    function MyDiv({ children }){
-        return (
-          <div>
-            {children}
-          </div>;
-        );
-    }
-
-    export default function Greeting() {
-      return (
-        <MyDiv>
-          <span>{"Hello"}</span>
-          <span>{"World"}</span>
-        </MyDiv>
-      );
-    }
-    ```
-
-    <details><summary><b>See Class</b></summary>
-    <p>
-
-    ```jsx harmony
-    const MyDiv = React.createClass({
-      render: function () {
-        return <div>{this.props.children}</div>;
-      },
-    });
-
-    ReactDOM.render(
-      <MyDiv>
-        <span>{"Hello"}</span>
-        <span>{"World"}</span>
-      </MyDiv>,
-      node
-    );
-    ```
-
-    </p>
-    </details>
-
-    **Note:** There are several methods available in the legacy React API to work with this prop. These include `React.Children.map`, `React.Children.forEach`, `React.Children.count`, `React.Children.only`, `React.Children.toArray`.
-
-    
+	
+	The `children` prop in React is a special prop that allows you to pass elements or components as children to a parent component. It is used to create a flexible and reusable component structure, enabling the composition of components by nesting them within one another.
+	
+	### Key Points:
+	- **Implicit Prop**: The `children` prop is automatically passed to every React component. You don't need to explicitly define it in the component's props.
+	- **Types of Children**: `children` can be any valid React node, including:
+	  - Single or multiple elements (like `<div>`, `<span>`, etc.).
+	  - Strings or numbers.
+	  - Arrays of elements.
+	  - Other components.
+	
+	### Example:
+	
+	```jsx
+	// Parent component that uses children
+	function Wrapper({ children }) {
+	  return (
+	    <div style={{ border: '2px solid blue', padding: '10px' }}>
+	      {children} {/* Render the children here */}
+	    </div>
+	  );
+	}
+	
+	// Child components
+	function App() {
+	  return (
+	    <Wrapper>
+	      <h1>Hello, World!</h1>
+	      <p>This is a simple example of using the children prop.</p>
+	    </Wrapper>
+	  );
+	}
+	
+	export default App;
+	```
+	
+	### Benefits of Using `children`:
+	1. **Composition**: It enables building complex UIs by composing simpler components together.
+	2. **Reusability**: Components can be reused in different contexts, and the content can be varied by changing the children passed to them.
+	3. **Flexibility**: Developers can create components that can accept different types and structures of content.
+--- 
 
 27. ### How to write comments in React?
 
@@ -729,7 +776,7 @@ References:
     </div>
     ```
 
-    
+---
 
 28. ### What is reconciliation?
 
@@ -737,7 +784,7 @@ References:
     React stores a copy of Browser DOM which is called `Virtual DOM`. When we make changes or add data, React creates a new Virtual DOM and compares it with the previous one. This comparison is done by `Diffing Algorithm`.
     Now React compares the Virtual DOM with Real DOM. It finds out the changed nodes and updates only the changed nodes in Real DOM leaving the rest nodes as it is. This process is called _Reconciliation_.
 
-    
+---
 
 29. ### Does the lazy function support named exports?
 
@@ -764,11 +811,11 @@ References:
     const SomeComponent = lazy(() => import("./IntermediateComponent.js"));
     ```
 
-    
+---
 
 30. ### Why React uses `className` over `class` attribute?
 
-    The attribute names written in JSX turned into keys of JavaScript objects and the JavaScript names cannot contain dashes or reversed words, it is recommended to use camelCase wherever applicable in JSX code. The attribute `class` is a keyword in JavaScript, and JSX is an extension of JavaScript. That's the principle reason why React uses `className` instead of `class`. Pass a string as the `className` prop.
+    The attribute names written in JSX turned into keys of JavaScript objects and the JavaScript names cannot contain dashes or reversed words, it is recommended to use camelCase wherever applicable in JSX code. ==The attribute `class` is a keyword== in JavaScript, and JSX is an extension of JavaScript. That's the principle reason why React uses `className` instead of `class`. Pass a string as the `className` prop.
 
     ```jsx harmony
     render() {
@@ -776,11 +823,11 @@ References:
     }
     ```
 
-    
+---
 
 31. ### What are fragments?
 
-    It's a common pattern or practice in React for a component to return multiple elements. _Fragments_ let you group a list of children without adding extra nodes to the DOM.
+    It's a common pattern or practice in React for a component to return multiple elements. ==_Fragments_ let you group a list of children without adding extra nodes to the DOM.==
     You need to use either `<Fragment>` or a shorter syntax having empty tag (`<></>`).
 
     Below is the example of how to use fragment inside _Story_ component.
@@ -825,7 +872,7 @@ References:
     }
     ```
 
-    
+---
 
 32. ### Why fragments are better than container divs?
 
@@ -835,7 +882,7 @@ References:
     2. Some CSS mechanisms like _Flexbox_ and _CSS Grid_ have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.
     3. The DOM Inspector is less cluttered.
 
-    
+---
 
 33. ### What are portals in React?
 
@@ -847,14 +894,18 @@ References:
     ```
 
     The first argument is any render-able React child, such as an element, string, or fragment. The second argument is a DOM element.
+    **Use Cases**:
+	- **Modals**: Overlaying content that needs to appear on top of other UI elements.
+	- **Tooltips**: Displaying information without being constrained by parent elements.
+	- **Notifications**: Consistently showing alerts or messages in a designated area of the screen
 
-    
+---
 
 34. ### What are stateless components?
 
-    If the behaviour of a component is independent of its state then it can be a stateless component. You can use either a function or a class for creating stateless components. But unless you need to use a lifecycle hook in your components, you should go for function components. There are a lot of benefits if you decide to use function components here; they are easy to write, understand, and test, a little faster, and you can avoid the `this` keyword altogether.
+    **Stateless components** in React are components that do not maintain their own state. They are often referred to as **functional components** and are primarily used for rendering UI based on the props passed to them.
 
-    
+---
 
 35. ### What are stateful components?
 
@@ -880,129 +931,94 @@ References:
     }
     ```
 
-    <details><summary><b>See Class</b></summary>
-    <p>
-    The equivalent class stateful component with a state that gets initialized in the `constructor`.
-
-    ```jsx harmony
-    class App extends Component {
-      constructor(props) {
-        super(props);
-        this.state = { count: 0 };
-      }
-
-      handleIncrement() {
-        setState({ count: this.state.count + 1 });
-      }
-
-      render() {
-        <>
-          <button onClick={() => this.handleIncrement}>Increment</button>
-          <span>Count: {count}</span>
-        </>;
-      }
-    }
-    ```
-
-    </p>
-    </details>
-
-    
+---
 
 36. ### How to apply validation on props in React?
 
-    When the application is running in _development mode_, React will automatically check all props that we set on components to make sure they have _correct type_. If the type is incorrect, React will generate warning messages in the console. It's disabled in _production mode_ due to performance impact. The mandatory props are defined with `isRequired`.
-
-    The set of predefined prop types:
-
-    1. `PropTypes.number`
-    2. `PropTypes.string`
-    3. `PropTypes.array`
-    4. `PropTypes.object`
-    5. `PropTypes.func`
-    6. `PropTypes.node`
-    7. `PropTypes.element`
-    8. `PropTypes.bool`
-    9. `PropTypes.symbol`
-    10. `PropTypes.any`
-
-    We can define `propTypes` for `User` component as below:
-
-    ```jsx harmony
-    import React from "react";
-    import PropTypes from "prop-types";
-
-    class User extends React.Component {
-      static propTypes = {
-        name: PropTypes.string.isRequired,
-        age: PropTypes.number.isRequired,
-      };
-
-      render() {
-        return (
-          <>
-            <h1>{`Welcome, ${this.props.name}`}</h1>
-            <h2>{`Age, ${this.props.age}`}</h2>
-          </>
-        );
-      }
-    }
-    ```
-
-    **Note:** In React v15.5 _PropTypes_ were moved from `React.PropTypes` to `prop-types` library.
-
-    _The Equivalent Functional Component_
-
-    ```jsx harmony
-    import React from "react";
-    import PropTypes from "prop-types";
-
-    function User({ name, age }) {
-      return (
-        <>
-          <h1>{`Welcome, ${name}`}</h1>
-          <h2>{`Age, ${age}`}</h2>
-        </>
-      );
-    }
-
-    User.propTypes = {
-      name: PropTypes.string.isRequired,
-      age: PropTypes.number.isRequired,
-    };
-    ```
-
-    
+	You can validate props in React using **PropTypes** or **TypeScript**.
+	
+	#### 1. Using PropTypes
+	
+	- **Install**: 
+	  ```bash
+	  npm install prop-types
+	  ```
+	- **Example**:
+	  ```jsx
+	  import React from 'react';
+	  import PropTypes from 'prop-types';
+	
+	  const Greeting = ({ name, age }) => {
+	    return <h1>Hello, {name}! You are {age} years old.</h1>;
+	  };
+	
+	  Greeting.propTypes = {
+	    name: PropTypes.string.isRequired, // required string
+	    age: PropTypes.number                // optional number
+	  };
+	
+	  export default Greeting;
+	  ```
+	
+	#### 2. Using TypeScript
+	
+	- **Example**:
+	  ```tsx
+	  import React from 'react';
+	
+	  interface GreetingProps {
+	    name: string;  // required string
+	    age?: number;  // optional number
+	  }
+	
+	  const Greeting: React.FC<GreetingProps> = ({ name, age }) => {
+	    return <h1>Hello, {name}! You are {age ? age : "unknown"} years old.</h1>;
+	  };
+	
+	  export default Greeting;
+	  ```
+	
+	### Summary
+	
+	- **PropTypes**: Runtime validation; useful for quick checks.
+	- **TypeScript**: Compile-time validation; provides stronger type safety.
+---
 
 37. ### What are the advantages of React?
 
     Below are the list of main advantages of React,
+	1. **Component-Based Architecture**: Promotes modularity and reusability, making maintenance easier.
+	2. **Virtual DOM**: Optimizes rendering for faster updates and improved performance.
+	3. **Unidirectional Data Flow**: Simplifies data management and debugging.
+	4. **Declarative Syntax**: Enhances readability and understanding of UI code.
+	5. **Strong Community Support**: Provides extensive resources, libraries, and tools.
+	6. **Rich Ecosystem**: Easily integrates with libraries like Redux and React Router.
+	7. **Performance Optimization**: Features like code splitting and lazy loading improve load times.
+	8. **Cross-Platform Development**: React Native allows code reuse for mobile applications.
+	9. **Developer Tools**: Excellent debugging tools facilitate inspection and optimization.
+	10. **Backward Compatibility**: Enables upgrades without significant refactoring.
 
-    1. Increases the application's performance with _Virtual DOM_.
-    2. JSX makes code easy to read and write.
-    3. It renders both on client and server side (_SSR_).
-    4. Easy to integrate with frameworks (Angular, Backbone) since it is only a view library.
-    5. Easy to write unit and integration tests with tools such as Jest.
-
-    
+---
 
 38. ### What are the limitations of React?
 
     Apart from the advantages, there are few limitations of React too,
+	1. **SEO Limitations**: Client-side rendering can hinder search engine indexing, affecting SEO unless server-side rendering is used.
+	2. **Learning Curve**: Advanced concepts like hooks and context API can be challenging for beginners.
+	3. **Performance Issues**: Unoptimized components may lead to unnecessary re-renders, impacting performance.
+	4. **Boilerplate Code**: Initial setup can involve a lot of boilerplate, especially when integrating with libraries.
+	5. **Rapidly Changing Ecosystem**: Frequent updates and changes can be overwhelming to keep up with.
+	6. **State Management**: Managing global state can become complex, requiring additional libraries.
+	7. **Tooling Fragmentation**: The vast ecosystem may lead to decision fatigue when selecting tools and libraries.
+	8. **JSX Syntax**: JSX can be unfamiliar and may pose a learning curve for new developers.
 
-    1. React is just a view library, not a full framework.
-    2. There is a learning curve for beginners who are new to web development.
-    3. Integrating React into a traditional MVC framework requires some additional configuration.
-    4. The code complexity increases with inline templating and JSX.
-    5. Too many smaller components leading to over engineering or boilerplate.
-
-    
+---
 
 39. ### What are the recommended ways for static type checking?
 
-    Normally we use _PropTypes library_ (`React.PropTypes` moved to a `prop-types` package since React v15.5) for _type checking_ in the React applications. For large code bases, it is recommended to use _static type checkers_ such as Flow or TypeScript, that perform type checking at compile time and provide auto-completion features.
+    Normally we use _PropTypes library_ (`React.PropTypes` moved to a ==`prop-types`== package since React v15.5) for _type checking_ in the React applications. For large code bases, it is recommended to use _static type checkers_ such as Flow or ==TypeScript==, that perform type checking at compile time and provide auto-completion features.
 
-    
+---
 
 40. ### What is the use of `react-dom` package?
 
@@ -1014,11 +1030,11 @@ References:
     4. `findDOMNode()`
     5. `createPortal()`
 
-    
+---
 
 41. ### What is ReactDOMServer?
 
-    The `ReactDOMServer` object enables you to render components to static markup (typically used on node server). This object is mainly used for _server-side rendering_ (SSR). The following methods can be used in both the server and browser environments:
+    `ReactDOMServer` is a module in React that provides methods to render React components to static markup (HTML) on the server side. This enables server-side rendering (SSR), which allows web applications to send fully rendered HTML pages to clients, improving initial load times and SEO.
 
     1. `renderToString()`
     2. `renderToStaticMarkup()`
@@ -1026,40 +1042,80 @@ References:
     For example, you generally run a Node-based web server like Express, Hapi, or Koa, and you call `renderToString` to render your root component to a string, which you then send as response.
 
     ```javascript
-    // using Express
-    import { renderToString } from "react-dom/server";
-    import MyPage from "./MyPage";
+    // server.js
+	import express from 'express';
+	import React from 'react';
+	import ReactDOMServer from 'react-dom/server';
+	import Hello from './Hello'; // Import the Hello component
+	
+	const app = express();
+	
+	app.get('/', (req, res) => {
+	    // Render the Hello component to a string
+	    const html = ReactDOMServer.renderToString(<Hello />);
+	    
+	    // Send the rendered HTML as the response
+	    res.send(`
+	        <!DOCTYPE html>
+	        <html>
+	            <head>
+	                <title>Server-Side Rendering Example</title>
+	            </head>
+	            <body>
+	                <div id="root">${html}</div>
+	                <script src="client.js"></script> <!-- Client-side bundle for hydration -->
+	            </body>
+	        </html>
+	    `);
+	});
+	
+	// Start the server
+	app.listen(3000, () => {
+	    console.log('Server is running on http://localhost:3000');
+	});
 
-    app.get("/", (req, res) => {
-      res.write(
-        "<!DOCTYPE html><html><head><title>My Page</title></head><body>"
-      );
-      res.write('<div id="content">');
-      res.write(renderToString(<MyPage />));
-      res.write("</div></body></html>");
-      res.end();
-    });
     ```
 
-    
+--- 
 
 42. ### How to use innerHTML in React?
 
-    The `dangerouslySetInnerHTML` attribute is React's replacement for using `innerHTML` in the browser DOM. Just like `innerHTML`, it is risky to use this attribute considering cross-site scripting (XSS) attacks. You just need to pass a `__html` object as key and HTML text as value.
+    Using `innerHTML` in React allows you to set HTML content directly within a component. However, it should be used cautiously to avoid security risks, such as Cross-Site Scripting (XSS) attacks. Here’s how to use `innerHTML` in React:
 
-    In this example MyComponent uses `dangerouslySetInnerHTML` attribute for setting HTML markup:
+	### Example of Using `innerHTML` in React
+	
+	1. **Basic Usage**: You can set `innerHTML` using the `dangerouslySetInnerHTML` prop, which is the official way to set HTML in React.
+	
+	#### Step 1: Create a React Component
+	
+	Here's a simple example of a component that uses `dangerouslySetInnerHTML`.
+	
+	```jsx
+	// MyComponent.js
+	import React from 'react';
+	
+	const MyComponent = () => {
+	    const htmlContent = '<h1>Hello, <strong>World!</strong></h1><p>This is rendered using <code>dangerouslySetInnerHTML</code>.</p>';
+	
+	    return (
+	        <div>
+	            <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+	        </div>
+	    );
+	};
+	
+	export default MyComponent;
+	```
+	
+	### Step 2: Use the Component
+		
+	### Important Considerations
+	
+	1. **Security Risks**: Using `dangerouslySetInnerHTML` can expose your application to XSS attacks if the HTML content comes from an untrusted source. Always sanitize user-generated content before rendering it.
+	
+	2. **Escaping Content**: If you're just displaying text and want to prevent HTML from being rendered, it's better to use curly braces (`{}`) to escape content.
 
-    ```jsx harmony
-    function createMarkup() {
-      return { __html: "First &middot; Second" };
-    }
-
-    function MyComponent() {
-      return <div dangerouslySetInnerHTML={createMarkup()} />;
-    }
-    ```
-
-    
+---
 
 43. ### How to use styles in React?
 
@@ -1078,7 +1134,7 @@ References:
 
     Style keys are camelCased in order to be consistent with accessing the properties on DOM nodes in JavaScript (e.g. `node.style.backgroundImage`).
 
-    
+---
 
 44. ### How events are different in React?
 
@@ -1087,11 +1143,11 @@ References:
     1. React event handlers are named using camelCase, rather than lowercase.
     2. With JSX you pass a function as the event handler, rather than a string.
 
-    
+---
 
 45. ### What is the impact of indexes as keys?
 
-    Keys should be stable, predictable, and unique so that React can keep track of elements.
+    ==Keys should be stable, predictable, and unique so that React can keep track of elements.==
 
     In the below code snippet each element's key will be based on ordering, rather than tied to the data that is being represented. This limits the optimizations that React can do and creates confusing bugs in the application.
 
@@ -1111,7 +1167,7 @@ References:
 
     **Note:** If you don't specify `key` prop at all, React will use index as a key's value while iterating over an array of data.
 
-    
+---
 
 46. ### How do you conditionally render components?
 

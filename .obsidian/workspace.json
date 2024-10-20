@@ -8,19 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "24611a89f73211d9",
+            "id": "b637bc5380dbad02",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "assets/images/react-state.jpg"
+                "file": "assets/images/vdom1.png"
               },
               "icon": "lucide-image",
-              "title": "react-state"
+              "title": "vdom1"
             }
           },
           {
-            "id": "b637bc5380dbad02",
+            "id": "442d7e274fa31d0b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,6 +31,16 @@
               },
               "icon": "lucide-file",
               "title": "Core React"
+            }
+          },
+          {
+            "id": "2386648fb7ba95b4",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ],
@@ -190,11 +200,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b637bc5380dbad02",
+  "active": "442d7e274fa31d0b",
   "lastOpenFiles": [
-    "assets/images",
-    "assets/images/react-state.jpg",
     "Interview/React/Core React.md",
+    "reconciliation.md",
+    "assets/images/vdom3.png",
+    "assets/images/vdom2.png",
+    "assets/images/vdom1.png",
+    "assets/images/react-state.jpg",
+    "assets/images",
     "Interview/React.js.md",
     "higher order.md",
     "Programming/ReactJs/Server Side Rendering.md",
@@ -227,7 +241,6 @@
     "Data Structures and Algorithm/Tree.md",
     "Data Structures and Algorithm/Untitled",
     "Templates",
-    "Data Structures and Algorithm",
-    "Programming/Javascript"
+    "Data Structures and Algorithm"
   ]
 }
