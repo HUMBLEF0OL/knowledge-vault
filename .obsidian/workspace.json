@@ -11,12 +11,10 @@
             "id": "b637bc5380dbad02",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/vdom1.png"
-              },
-              "icon": "lucide-image",
-              "title": "vdom1"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -25,26 +23,29 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Interview/React/Core React.md",
+                "file": "Interview/React/Misc.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Core React"
+              "title": "Misc"
             }
           },
           {
             "id": "2386648fb7ba95b4",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Libraries/React/1. Introduction.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. Introduction"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -200,22 +201,34 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "442d7e274fa31d0b",
+  "active": "b637bc5380dbad02",
   "lastOpenFiles": [
-    "Interview/React/Core React.md",
-    "Interview/React/React Router.md",
-    "Interview/React/React Testing.md",
-    "Interview/React/Redux.md",
+    "Libraries/React/1. Introduction.md",
+    "Libraries/React/9..md",
     "Interview/React/Misc.md",
+    "assets/images/vdom1.png",
+    "Libraries/React/8..md",
+    "Libraries/React/7..md",
+    "Libraries/React/6..md",
+    "Libraries/React/5..md",
+    "Libraries/React/4..md",
+    "Libraries/React/3..md",
+    "Libraries/React/2..md",
+    "Libraries/React",
+    "Libraries",
+    "Untitled",
+    "Interview/React/Redux.md",
+    "Interview/React/React Testing.md",
+    "Interview/React/React Router.md",
+    "Interview/React/Core React.md",
     "Interview/React.js.md",
     "reconciliation.md",
     "assets/images/vdom3.png",
     "assets/images/vdom2.png",
-    "assets/images/vdom1.png",
     "assets/images/react-state.jpg",
     "assets/images",
     "higher order.md",
-    "Programming/ReactJs/Server Side Rendering.md",
+    "Libraries/React/Server Side Rendering.md",
     "assets",
     "Interview/Misc/SPA vs MPA.md",
     "assets/images/flux.png.md",
@@ -224,23 +237,10 @@
     "Interview/Misc",
     "Interview/React",
     "Interview",
-    "Programming/Javascript/Web Workers.md",
-    "Programming/Javascript/Strict Mode.md",
-    "Programming/Javascript/JSDoc.md",
-    "Programming/Javascript/Decorator.md",
-    "Programming/Javascript/9. Best Practices.md",
-    "Programming/Javascript/8. Performance Optimization.md",
-    "Programming/Javascript/7.3 Async-Await.md",
-    "Programming/Javascript/7.2 Promises.md",
-    "Programming/Javascript/7.1 Callbacks.md",
-    "Programming/Javascript/7. Design Patterns.md",
-    "Programming/Javascript/13. Modules.md",
-    "Programming/Javascript/12. Error Handling.md",
-    "Programming/Javascript/11. Data Structures.md",
-    "Programming/Javascript/10. ES6.md",
-    "Data Structures and Algorithm/Trie.md",
-    "Data Structures and Algorithm/Untitled",
-    "Templates",
-    "Data Structures and Algorithm"
+    "Languages/Javascript/Web Workers.md",
+    "Languages/Javascript/Strict Mode.md",
+    "Languages/Javascript/JSDoc.md",
+    "Languages/Javascript/Decorator.md",
+    "Languages/Javascript/9. Best Practices.md"
   ]
 }

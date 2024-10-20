@@ -1,8 +1,6 @@
 ---
 tags:
   - ReactJs
-  - React-Router
-  - Interview-Prep
 Date: 2024-10-12
 Title: React Router
 References:

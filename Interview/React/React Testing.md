@@ -1,8 +1,6 @@
 ---
 tags:
   - ReactJs
-  - React-Testing
-  - Interview-Prep
 Date: 2024-10-20
 Title: 
 References:
