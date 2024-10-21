@@ -11,8 +11,12 @@
             "id": "adf322597fe1f565",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Programming/Javascript/7.2 Promises.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -93,6 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Programming/Javascript/7.2 Promises.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,6 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Programming/Javascript/7.2 Promises.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,7 +136,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Programming/Javascript/7.2 Promises.md"
+              }
             }
           },
           {
@@ -163,10 +171,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "adf322597fe1f565",
+  "active": "1da16af30829329c",
   "lastOpenFiles": [
-    "Programming/Javascript/Fetch API.md",
+    "Programming/Javascript/14. Fetch API.md",
     "Programming/Javascript/Events.md",
+    "Programming/Javascript/Strict Mode.md",
     "Programming/Javascript/Event Loop.md",
     "Programming/Javascript/Decorator.md",
     "Programming/Javascript/13. Modules.md",
@@ -181,7 +190,6 @@
     "Programming/Javascript/Temporal Dead Zone.md",
     "Programming/Javascript/Prototypes.md",
     "Programming/Javascript/Web Workers.md",
-    "Programming/Javascript/Strict Mode.md",
     "Programming/Javascript/Scope in Javascript.md",
     "Programming/Javascript/7.1 Callbacks.md",
     "Templates/NotesTemplate.md",
