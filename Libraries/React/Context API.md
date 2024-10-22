@@ -2,16 +2,10 @@
 tags:
   - ReactJs
 Date: 2024-10-12
-Title: 
+Title: Context API
 References:
   - https://www.freecodecamp.org/news/react-context-api-explained-with-examples/
 ---
-Here are extensive notes on **React Context API**, based on the FreeCodeCamp article.
-
----
-
-### React Context API: Explained with Examples
-
 #### What is Context API?
 The **React Context API** provides a way to share data (such as global state) across the component tree without having to pass props down manually at every level. It is particularly useful for managing **global state**, such as theme settings, user authentication, and other configurations that need to be accessible by many components at different levels of the hierarchy.
 
@@ -20,7 +14,7 @@ Before Context API, prop drilling (passing props through intermediate components
 ---
 
 ### When to Use Context API
-Context API should be used sparingly because it can introduce complexity if not managed properly. It is best used when:
+Context API should be used ==sparingly== because it can introduce complexity if not managed properly. It is best used when:
 - Data needs to be accessible globally.
 - Multiple components need access to the same data.
 - Passing props down many levels is cumbersome (prop drilling).
@@ -275,7 +269,3 @@ One downside of Context API is that when the context value changes, all componen
 ### Conclusion
 
 The **React Context API** provides a powerful and simple way to share data between components without passing props manually. It is ideal for managing global state, such as theme settings or user authentication, but should be used cautiously to avoid performance pitfalls. For larger and more complex state management, tools like Redux might be a better fit.
-
---- 
-
-Let me know if you need any additional details or diagrams for this topic!

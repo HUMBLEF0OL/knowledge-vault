@@ -8,17 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b637bc5380dbad02",
+            "id": "adf322597fe1f565",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Libraries/React/Server Side Rendering.md",
+                "file": "Libraries/React/6. CSS in React.md",
                 "mode": "source",
                 "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Server Side Rendering"
+              }
             }
           },
           {
@@ -34,205 +32,197 @@
               "icon": "lucide-file",
               "title": "2. Hooks and other features"
             }
+            "id": "e8c8a33847faeb85",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
           }
         ],
         "currentTab": 1
-      }
-    ],
-    "direction": "vertical"
-  },
-  "left": {
-    "id": "caa7ad014a3bab75",
-    "type": "split",
-    "children": [
-      {
-        "id": "4c5dc50e86adc1e4",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "1da16af30829329c",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "byCreatedTimeReverse"
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
-            }
-          },
-          {
-            "id": "c989482451aff07b",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "Search"
-            }
-          },
-          {
-            "id": "a666040195bc0f66",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "Bookmarks"
-            }
-          }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 300
-  },
-  "right": {
-    "id": "12f5cfbcc47a823b",
-    "type": "split",
-    "children": [
-      {
-        "id": "e2bb461770688a43",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "7d4f1cf9ecfb9440",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Interview/React/Core React.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for Core React"
-            }
-          },
-          {
-            "id": "39693146a6d902b1",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Interview/React/Core React.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from Core React"
-            }
-          },
-          {
-            "id": "f7afd86ce4a2488c",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
-          },
-          {
-            "id": "b0d7de712aee2767",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Interview/React/Core React.md"
-              },
-              "icon": "lucide-list",
-              "title": "Outline of Core React"
-            }
-          },
-          {
-            "id": "72f13fb1b3d96d8e",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          }
-        ],
-        "currentTab": 4
-      }
-    ],
-    "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
-  },
-  "left-ribbon": {
-    "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false,
-      "obsidian-importer:Open Importer": false,
-      "obisidian-note-linker:Note Linker": false,
-      "templater-obsidian:Templater": false
+      ]
     }
-  },
-  "active": "1da16af30829329c",
-  "lastOpenFiles": [
-    "Languages/Javascript/Javascript.md",
-    "Languages/Javascript/1. Javascript Fundamentals.md",
-    "Interview/React/Misc Questions.md",
-    "Interview/React/Redux Questions.md",
-    "Interview/React/React Testing Questions.md",
-    "Interview/React/React Router Questions.md",
-    "Interview/React/Core React Questions.md",
-    "Libraries/React/2. Hooks and other features.md",
-    "Libraries/React/Custom Hooks.md",
-    "Libraries/React/1. Introduction.md",
-    "Libraries/React/Context API.md",
-    "Libraries/React/React.js.md",
-    "Libraries/React/Server Side Rendering.md",
-    "Libraries/React/9..md",
-    "assets/images/vdom1.png",
-    "Libraries/React/8..md",
-    "Libraries/React/7..md",
-    "Libraries/React/6..md",
-    "Libraries/React/5..md",
-    "Libraries/React/4..md",
-    "Libraries/React/3..md",
-    "Libraries/React",
-    "Libraries",
-    "Untitled",
-    "Interview/React.js.md",
-    "reconciliation.md",
-    "assets/images/vdom3.png",
-    "assets/images/vdom2.png",
-    "assets/images/react-state.jpg",
-    "assets/images",
-    "higher order.md",
-    "assets",
-    "Interview/Misc/SPA vs MPA.md",
-    "assets/images/flux.png.md",
-    "images",
-    "Programming/ReactJs",
-    "Interview/Misc",
-    "Interview/React",
-    "Interview",
-    "Languages/Javascript/Web Workers.md"
-  ]
+  ],
+  "direction": "vertical"
+},
+"left": {
+  "id": "caa7ad014a3bab75",
+  "type": "split",
+  "children": [
+    {
+      "id": "4c5dc50e86adc1e4",
+      "type": "tabs",
+      "children": [
+        {
+          "id": "1da16af30829329c",
+          "type": "leaf",
+          "state": {
+            "type": "file-explorer",
+            "state": {
+              "sortOrder": "alphabetical"
+            }
+          }
+        },
+        {
+          "id": "c989482451aff07b",
+          "type": "leaf",
+          "state": {
+            "type": "search",
+            "state": {
+              "query": "",
+              "matchingCase": false,
+              "explainSearch": false,
+              "collapseAll": false,
+              "extraContext": false,
+              "sortOrder": "alphabetical"
+            }
+          }
+        },
+        {
+          "id": "a666040195bc0f66",
+          "type": "leaf",
+          "state": {
+            "type": "bookmarks",
+            "state": {}
+          }
+        }
+      ]
+    }
+  ],
+  "direction": "horizontal",
+  "width": 300
+},
+"right": {
+  "id": "12f5cfbcc47a823b",
+  "type": "split",
+  "children": [
+    {
+      "id": "e2bb461770688a43",
+      "type": "tabs",
+      "children": [
+        {
+          "id": "7d4f1cf9ecfb9440",
+          "type": "leaf",
+          "state": {
+            "type": "backlink",
+            "state": {
+              "file": "Libraries/React/6. CSS in React.md",
+              "collapseAll": false,
+              "extraContext": false,
+              "sortOrder": "alphabetical",
+              "showSearch": false,
+              "searchQuery": "",
+              "backlinkCollapsed": false,
+              "unlinkedCollapsed": true
+            }
+          }
+        },
+        {
+          "id": "39693146a6d902b1",
+          "type": "leaf",
+          "state": {
+            "type": "outgoing-link",
+            "state": {
+              "file": "Libraries/React/6. CSS in React.md",
+              "linksCollapsed": false,
+              "unlinkedCollapsed": true
+            }
+          }
+        },
+        {
+          "id": "f7afd86ce4a2488c",
+          "type": "leaf",
+          "state": {
+            "type": "tag",
+            "state": {
+              "sortOrder": "frequency",
+              "useHierarchy": true
+            }
+          }
+        },
+        {
+          "id": "b0d7de712aee2767",
+          "type": "leaf",
+          "state": {
+            "type": "outline",
+            "state": {
+              "file": "Libraries/React/6. CSS in React.md"
+            }
+          }
+        },
+        {
+          "id": "72f13fb1b3d96d8e",
+          "type": "leaf",
+          "state": {
+            "type": "git-view",
+            "state": {}
+          }
+        }
+      ],
+      "currentTab": 4
+    }
+  ],
+  "direction": "horizontal",
+  "width": 300,
+  "collapsed": true
+},
+"left-ribbon": {
+  "hiddenItems": {
+    "switcher:Open quick switcher": false,
+    "graph:Open graph view": false,
+    "canvas:Create new canvas": false,
+    "daily-notes:Open today's daily note": false,
+    "templates:Insert template": false,
+    "command-palette:Open command palette": false,
+    "obsidian-git:Open Git source control": false,
+    "obsidian-importer:Open Importer": false,
+    "obisidian-note-linker:Note Linker": false,
+    "templater-obsidian:Templater": false
+  }
+},
+"active": "1da16af30829329c",
+"active": "adf322597fe1f565",
+"lastOpenFiles": [
+  "Libraries/React/React.js.md",
+  "Interview/React.js.md",
+  "Libraries/React/8. Performance Optimization.md",
+  "Libraries/React/7. Testing.md",
+  "Libraries/React/6. CSS in React.md",
+  "Libraries/React/5. Effects and Side Effects.md",
+  "Libraries/React/4. State Management.md",
+  "Libraries/React/3. Routing.md",
+  "Libraries/React/1. Fundamentals.md",
+  "Libraries/React/Redux.md",
+  "Libraries/React/9..md",
+  "Libraries/React/2. Hooks and other features.md",
+  "Libraries/React/Context API.md",
+  "Data Structures and Algorithm/Binary Tree.md",
+  "Interview/React/Core React Questions.md",
+  "Programming/Javascript/7.2 Promises.md",
+  "Programming/Javascript/Fetch API.md",
+  "assets/images/vdom3.png",
+  "assets/images/vdom2.png",
+  "assets/images/vdom1.png",
+  "assets/images/react-state.jpg",
+  "assets/images/flux.png.md",
+  "assets/images",
+  "assets",
+  "Libraries/React/Server Side Rendering.md",
+  "Libraries/React/Custom Hooks.md",
+  "Libraries/React",
+  "Libraries",
+  "Languages/Javascript/Web Workers.md",
+  "Languages/Javascript/Temporal Dead Zone.md",
+  "Languages/Javascript/Strict Mode.md",
+  "Languages/Javascript/Prototypes.md",
+  "Languages/Javascript/Scope in Javascript.md",
+  "Languages/Javascript/JSDoc.md",
+  "Languages/Javascript",
+  "Languages",
+  "Interview/React",
+  "Interview/Misc",
+  "Interview",
+  "Data Structures and Algorithm/Untitled"
+]
 }

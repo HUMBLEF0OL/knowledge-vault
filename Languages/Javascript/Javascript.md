@@ -15,7 +15,7 @@ References:
 	[[7.1 Callbacks]]
 	[[7.2 Promises]]
 	[[7.3 Async-Await]]
-[[8. Performance Optimization]]
+[[Languages/Javascript/8. Performance Optimization]]
 [[9. Best Practices]]
 [[10. ES6]]
 [[11. Data Structures]]
