@@ -34,19 +34,9 @@
               "icon": "lucide-file",
               "title": "2. Hooks and other features"
             }
-          },
-          {
-            "id": "2386648fb7ba95b4",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "flux.pn",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -202,8 +192,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2386648fb7ba95b4",
+  "active": "1da16af30829329c",
   "lastOpenFiles": [
+    "Languages/Javascript/Javascript.md",
+    "Languages/Javascript/1. Javascript Fundamentals.md",
     "Interview/React/Misc Questions.md",
     "Interview/React/Redux Questions.md",
     "Interview/React/React Testing Questions.md",
@@ -241,8 +233,6 @@
     "Interview/Misc",
     "Interview/React",
     "Interview",
-    "Languages/Javascript/Web Workers.md",
-    "Languages/Javascript/Strict Mode.md",
-    "Languages/Javascript/JSDoc.md"
+    "Languages/Javascript/Web Workers.md"
   ]
 }

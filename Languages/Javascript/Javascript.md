@@ -1,6 +1,6 @@
 ---
 tags:
-  - Programming
+  - Language
 Date: 2024-10-12
 Title: Index
 References:
