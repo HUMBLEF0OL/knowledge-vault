@@ -1,3 +1,5 @@
 {
-  "monospaceFontFamily": "Fira Code"
+  "monospaceFontFamily": "Fira Code",
+  "theme": "obsidian",
+  "cssTheme": "Things"
 }
