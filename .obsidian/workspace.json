@@ -25,30 +25,58 @@
             "id": "9bdb111d93eae505",
             "type": "leaf",
             "state": {
+              "type": "pdf",
+              "state": {
+                "file": "CheatSheets/git.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "git"
+            }
+          },
+          {
+            "id": "3bb5633a8deb1d3c",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "Backend/Nodejs/10. Performance Optimization.md",
+                "file": "Tools/Webpack/3. Webpack for React.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10. Performance Optimization"
+              "title": "3. Webpack for React"
             }
           },
           {
             "id": "9fbce94961dc87ff",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "CheatSheets/typescript.png"
+                "file": "Tools/Babel.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "typescript"
+              "icon": "lucide-file",
+              "title": "Babel"
+            }
+          },
+          {
+            "id": "ca46a6a023a4bc04",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tools/Babel.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Babel"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -205,11 +233,20 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "9fbce94961dc87ff",
+  "active": "9bdb111d93eae505",
   "lastOpenFiles": [
+    "Tools/Git.md",
+    "Tools/Webpack/3. Webpack for React.md",
+    "Tools/Webpack/1. Basics.md",
+    "Tools/Webpack/2. Advanced Concepts.md",
+    "Tools/Webpack",
+    "Tools/Webp.md",
+    "Tools/Webpack.md",
+    "Tools/Babel.md",
+    "CheatSheets/typescript.png",
+    "Backend/Nodejs/10. Performance Optimization.md",
     "CheatSheets/git.pdf",
     "CheatSheets/Cheatsheets.md",
-    "Backend/Nodejs/10. Performance Optimization.md",
     "Backend/Nodejs/roadmap.md",
     "Backend/Nodejs/12. Caching and Queuing.md",
     "Backend/Nodejs/11. Typescript with NodeJs.md",
@@ -225,15 +262,8 @@
     "Backend/Nodejs/2. Starting with Express.md",
     "Backend/Nodejs/Error Handling.md",
     "Backend/Nodejs/1. Introduction.md",
-    "Tools/Webpack.md",
-    "Tools/Babel.md",
-    "Tools/Git.md",
     "Libraries/React/React.js.md",
-    "CheatSheets/typescript.png",
     "Languages/Javascript/Fetch API.md",
-    "Languages/Javascript/Javascript.md",
-    "Languages/Javascript/5. DOM Manipulation.md",
-    "Backend/Nodejs/JWT.md",
     "CheatSheets/typescript/TypeScript Control Flow Analysis.pdf",
     "CheatSheets/typescript/TypeScript Interfaces.pdf",
     "CheatSheets/typescript/TypeScript Types.pdf",
@@ -242,7 +272,6 @@
     "CheatSheets/pdfs/TypeScript Types.pdf",
     "CheatSheets/pdfs/TypeScript Interfaces.pdf",
     "CheatSheets/pdfs/TypeScript Control Flow Analysis.pdf",
-    "CheatSheets/pdfs/TypeScript Classes.pdf",
     "assets/images/vdom1.png",
     "assets/images/vdom3.png",
     "assets/images/vdom2.png",
