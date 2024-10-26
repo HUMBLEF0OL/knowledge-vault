@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Frameworks/Next/9. SEO and Metadata Management.md",
+                "file": "Backend/Nodejs/roadmap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9. SEO and Metadata Management"
+              "title": "roadmap"
             }
           },
           {
@@ -27,15 +27,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Languages/Javascript/5. DOM Manipulation.md",
+                "file": "Backend/Nodejs/10. Performance Optimization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5. DOM Manipulation"
+              "title": "10. Performance Optimization"
+            }
+          },
+          {
+            "id": "9fbce94961dc87ff",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "CheatSheets/typescript.png"
+              },
+              "icon": "lucide-image",
+              "title": "typescript"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -192,44 +205,44 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "442d7e274fa31d0b",
+  "active": "9fbce94961dc87ff",
   "lastOpenFiles": [
+    "CheatSheets/git.pdf",
+    "CheatSheets/Cheatsheets.md",
+    "Backend/Nodejs/10. Performance Optimization.md",
+    "Backend/Nodejs/roadmap.md",
+    "Backend/Nodejs/12. Caching and Queuing.md",
+    "Backend/Nodejs/11. Typescript with NodeJs.md",
+    "Backend/Nodejs/11. Deployment.md",
+    "Backend/Nodejs/8. Real-time Communication.md",
+    "Backend/Nodejs/9. Testing and Debugging.md",
+    "Backend/Nodejs/7. Advanced APIs and RESTful Design.md",
+    "Backend/Nodejs/6. Authentication and Authorization.md",
+    "Backend/Nodejs/5. Databases and ORMs.md",
+    "Backend/Nodejs/MongoDB.md",
+    "Backend/Nodejs/4. Middleware.md",
+    "Backend/Nodejs/3. Advanced Asynchronous Programming.md",
+    "Backend/Nodejs/2. Starting with Express.md",
+    "Backend/Nodejs/Error Handling.md",
+    "Backend/Nodejs/1. Introduction.md",
+    "Tools/Webpack.md",
+    "Tools/Babel.md",
+    "Tools/Git.md",
+    "Libraries/React/React.js.md",
+    "CheatSheets/typescript.png",
+    "Languages/Javascript/Fetch API.md",
+    "Languages/Javascript/Javascript.md",
+    "Languages/Javascript/5. DOM Manipulation.md",
+    "Backend/Nodejs/JWT.md",
     "CheatSheets/typescript/TypeScript Control Flow Analysis.pdf",
     "CheatSheets/typescript/TypeScript Interfaces.pdf",
     "CheatSheets/typescript/TypeScript Types.pdf",
-    "CheatSheets/typescript.png",
-    "CheatSheets/git.pdf",
-    "Backend/Nodejs/Error Handling.md",
     "CheatSheets/typescript/TypeScript Classes.pdf",
     "CheatSheets/typescript",
     "CheatSheets/pdfs/TypeScript Types.pdf",
     "CheatSheets/pdfs/TypeScript Interfaces.pdf",
     "CheatSheets/pdfs/TypeScript Control Flow Analysis.pdf",
     "CheatSheets/pdfs/TypeScript Classes.pdf",
-    "Frameworks/Next/5. Layouts, Pages, and Navigation.md",
-    "Backend/Nodejs/JWT.md",
-    "Backend/Nodejs/MongoDB.md",
-    "Backend/Nodejs/Express.md",
-    "Backend/Nodejs/Event Loop.md",
-    "Backend/Nodejs/1. Introduction.md",
-    "Untitled.md",
-    "Languages/Javascript/5. DOM Manipulation.md",
-    "Languages/Javascript/4.3 Async-Await.md",
-    "Frameworks/Next/9. SEO and Metadata Management.md",
-    "Languages/Javascript/4.2 Promises.md",
-    "Languages/Javascript/4.1 Callbacks.md",
-    "Languages/Javascript/4. Asynchronous JavaScript.md",
-    "Languages/Javascript/7. Design Patterns.md",
-    "Languages/Javascript/Event Loop.md",
-    "Languages/Javascript/3. Objects and Object-Oriented Programming.md",
-    "Languages/Javascript/Prototypes.md",
-    "Languages/Javascript/1. Javascript Fundamentals.md",
-    "Languages/Javascript/2. Control Flow and Loops.md",
-    "Tools/Webpack.md",
-    "Tools/Babel.md",
-    "Tools/Git.md",
-    "Frameworks/Next/11. TypeScript in Next.js.md",
-    "Frameworks/Next/Untitled.md",
     "assets/images/vdom1.png",
     "assets/images/vdom3.png",
     "assets/images/vdom2.png",
