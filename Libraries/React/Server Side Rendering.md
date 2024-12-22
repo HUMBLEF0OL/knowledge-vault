@@ -5,10 +5,6 @@ Date: 2024-10-16
 Title: Server Side Rendering
 References:
 ---
-Here are comprehensive notes on **React Server-Side Rendering (SSR)**, based on the FreeCodeCamp article:
-
----
-
 ### React Server-Side Rendering (SSR)
 
 #### What is Server-Side Rendering (SSR)?

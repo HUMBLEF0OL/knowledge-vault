@@ -584,7 +584,8 @@ References:
     }
     ```
 
-    In most cases, it's recommend to use controlled components to implement forms. In a controlled component, form data is handled by a React component. The alternative is uncontrolled components, where form data is handled by the DOM itself.
+In most cases, it's recommend to use controlled components to implement forms. In a controlled component, form data is handled by a React component. The alternative is uncontrolled components, where form data is handled by the DOM itself.
+
 | Feature                 | Controlled Components                               | Uncontrolled Components                          |
 |-------------------------|----------------------------------------------------|-------------------------------------------------|
 | Value Management        | Managed by React state                             | Managed by the DOM                              |

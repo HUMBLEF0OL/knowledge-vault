@@ -8,43 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "442d7e274fa31d0b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Backend/Nodejs/roadmap.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "roadmap"
-            }
-          },
-          {
-            "id": "9bdb111d93eae505",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "CheatSheets/git.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "git"
-            }
-          },
-          {
             "id": "3bb5633a8deb1d3c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/Webpack/3. Webpack for React.md",
+                "file": "Frameworks/Next/2. File-Based Routing with App Router.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3. Webpack for React"
+              "title": "2. File-Based Routing with App Router"
+            }
+          },
+          {
+            "id": "7f2a14e8cb892cfb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Libraries/React/Server Side Rendering.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Server Side Rendering"
             }
           },
           {
@@ -53,30 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/Babel.md",
+                "file": "Interview/React/Redux & Context API Questions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Babel"
-            }
-          },
-          {
-            "id": "ca46a6a023a4bc04",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tools/Babel.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Babel"
+              "title": "Redux & Context API Questions"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -233,21 +207,30 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "9bdb111d93eae505",
+  "active": "9fbce94961dc87ff",
   "lastOpenFiles": [
-    "Tools/Git.md",
-    "Tools/Webpack/3. Webpack for React.md",
-    "Tools/Webpack/1. Basics.md",
+    "Interview/React/React Router Questions.md",
+    "Interview/React/Redux & Context API Questions.md",
+    "Interview/React/Misc Questions.md",
+    "Interview/React/Core React Questions.md",
+    "Libraries/React/Server Side Rendering.md",
+    "Tools/Babel.md",
+    "Backend/Nodejs/1. Introduction.md",
+    "Untitled.md",
+    "Frameworks/Next/2. File-Based Routing with App Router.md",
+    "Frameworks/Next/1. Introduction.md",
     "Tools/Webpack/2. Advanced Concepts.md",
+    "Tools/Webpack/3. Webpack for React.md",
+    "Backend/Nodejs/roadmap.md",
+    "CheatSheets/git.pdf",
+    "Tools/Git.md",
+    "Tools/Webpack/1. Basics.md",
     "Tools/Webpack",
     "Tools/Webp.md",
     "Tools/Webpack.md",
-    "Tools/Babel.md",
     "CheatSheets/typescript.png",
     "Backend/Nodejs/10. Performance Optimization.md",
-    "CheatSheets/git.pdf",
     "CheatSheets/Cheatsheets.md",
-    "Backend/Nodejs/roadmap.md",
     "Backend/Nodejs/12. Caching and Queuing.md",
     "Backend/Nodejs/11. Typescript with NodeJs.md",
     "Backend/Nodejs/11. Deployment.md",
@@ -255,15 +238,6 @@
     "Backend/Nodejs/9. Testing and Debugging.md",
     "Backend/Nodejs/7. Advanced APIs and RESTful Design.md",
     "Backend/Nodejs/6. Authentication and Authorization.md",
-    "Backend/Nodejs/5. Databases and ORMs.md",
-    "Backend/Nodejs/MongoDB.md",
-    "Backend/Nodejs/4. Middleware.md",
-    "Backend/Nodejs/3. Advanced Asynchronous Programming.md",
-    "Backend/Nodejs/2. Starting with Express.md",
-    "Backend/Nodejs/Error Handling.md",
-    "Backend/Nodejs/1. Introduction.md",
-    "Libraries/React/React.js.md",
-    "Languages/Javascript/Fetch API.md",
     "CheatSheets/typescript/TypeScript Control Flow Analysis.pdf",
     "CheatSheets/typescript/TypeScript Interfaces.pdf",
     "CheatSheets/typescript/TypeScript Types.pdf",
