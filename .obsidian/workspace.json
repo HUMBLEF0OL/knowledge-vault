@@ -41,16 +41,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Interview/React/Redux & Context API Questions.md",
+                "file": "Interview/Typescript.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Redux & Context API Questions"
+              "title": "Typescript"
+            }
+          },
+          {
+            "id": "387957e8c163b818",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -207,37 +219,37 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "9fbce94961dc87ff",
+  "active": "387957e8c163b818",
   "lastOpenFiles": [
-    "Interview/React/React Router Questions.md",
+    "Interview/React/Algorithmic Questions.md",
+    "Tools/Webpack/3. Webpack for React.md",
+    "Tools/Webpack/1. Basics.md",
+    "Interview/CSS.md",
+    "Interview/Typescript.md",
     "Interview/React/Redux & Context API Questions.md",
-    "Interview/React/Misc Questions.md",
+    "Interview/React/React Router Questions.md",
     "Interview/React/Core React Questions.md",
+    "Interview/Misc/SPA vs MPA.md",
+    "Tools/Webpack/2. Advanced Concepts.md",
+    "CheatSheets/typescript.png",
+    "CSS.md",
+    "Interview/React/Misc Questions.md",
     "Libraries/React/Server Side Rendering.md",
     "Tools/Babel.md",
     "Backend/Nodejs/1. Introduction.md",
     "Untitled.md",
     "Frameworks/Next/2. File-Based Routing with App Router.md",
     "Frameworks/Next/1. Introduction.md",
-    "Tools/Webpack/2. Advanced Concepts.md",
-    "Tools/Webpack/3. Webpack for React.md",
     "Backend/Nodejs/roadmap.md",
     "CheatSheets/git.pdf",
     "Tools/Git.md",
-    "Tools/Webpack/1. Basics.md",
     "Tools/Webpack",
     "Tools/Webp.md",
     "Tools/Webpack.md",
-    "CheatSheets/typescript.png",
     "Backend/Nodejs/10. Performance Optimization.md",
     "CheatSheets/Cheatsheets.md",
     "Backend/Nodejs/12. Caching and Queuing.md",
     "Backend/Nodejs/11. Typescript with NodeJs.md",
-    "Backend/Nodejs/11. Deployment.md",
-    "Backend/Nodejs/8. Real-time Communication.md",
-    "Backend/Nodejs/9. Testing and Debugging.md",
-    "Backend/Nodejs/7. Advanced APIs and RESTful Design.md",
-    "Backend/Nodejs/6. Authentication and Authorization.md",
     "CheatSheets/typescript/TypeScript Control Flow Analysis.pdf",
     "CheatSheets/typescript/TypeScript Interfaces.pdf",
     "CheatSheets/typescript/TypeScript Types.pdf",

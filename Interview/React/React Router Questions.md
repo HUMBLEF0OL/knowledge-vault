@@ -7,514 +7,351 @@ Title: React Router
 References:
   - https://github.com/sudheerj/reactjs-interview-questions
 ---
-## React Router
 
-79. ### What is React Router?
-    React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
+### **Beginner-Level**
 
-80. ### How React Router is different from history library?
+#### **1. What is React Router?**
 
-  
+**Answer:**  
+React Router is a standard library for routing in React. It enables navigation between views of different components in a React application, allowing developers to implement dynamic and declarative routing.
 
-    React Router is a wrapper around the `history` library which handles interaction with the browser's `window.history` with its browser and hash histories. It also provides memory history which is useful for environments that don't have global history, such as mobile app development (React Native) and unit testing with Node.
+---
 
-  
+#### **2. What are the main components of React Router?**
 
+**Answer:**
 
+1. **`BrowserRouter`**: Uses the HTML5 history API for navigation.
+2. **`Routes`**: Defines a collection of routes in the app.
+3. **`Route`**: Defines a single route and what component to render when matched.
+4. **`Link`**: Creates navigation links.
+5. **`NavLink`**: Similar to `Link` but adds styling for active routes.
+6. **`useNavigate`**: Hook for programmatic navigation.
+7. **`useParams`**: Hook to access route parameters.
 
-  
+---
 
-81. ### What are the `<Router>` components of React Router v6?
+#### **3. What is the difference between `BrowserRouter` and `HashRouter`?**
 
-  
+**Answer:**
 
-    React Router v6 provides below 4 `<Router>` components:
+- **BrowserRouter**: Uses the HTML5 history API to manage URLs (e.g., `/about`).
+- **HashRouter**: Uses the hash portion of the URL (e.g., `#/about`) and works in environments where the server doesn't support dynamic routes.
 
-  
+---
 
-    1.  `<BrowserRouter>`:Uses the HTML5 history API for standard web apps.
+#### **4. How do you set up a basic route in React Router?**
 
-    2.  `<HashRouter>`:Uses hash-based routing for static servers.
+**Answer:**  
+**Example:**
 
-    3.  `<MemoryRouter>`:Uses in-memory routing for testing and non-browser environments.
+```javascript
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
 
-    4.  `<StaticRouter>`:Provides static routing for server-side rendering (SSR).
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
+  );
+}
+```
 
-  
+---
 
-    The above components will create _browser_, _hash_, _memory_ and _static_ history instances. React Router v6 makes the properties and methods of the `history` instance associated with your router available through the context in the `router` object.
+#### **5. How do you create navigation links in React Router?**
 
-  
+**Answer:**  
+Use the `Link` or `NavLink` component.  
+**Example:**
 
+```javascript
+import { Link } from 'react-router-dom';
 
+function Navbar() {
+  return (
+    <nav>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+    </nav>
+  );
+}
+```
 
-  
+---
 
-82. ### What is the purpose of `push()` and `replace()` methods of `history`?
+#### **6. What is the difference between `Link` and `NavLink`?**
 
-  
+**Answer:**
 
-    A history instance has two methods for navigation purpose.
+- **`Link`**: Provides basic navigation.
+- **`NavLink`**: Adds a class to the active link by default. You can also customize the active class.
 
-  
+**Example:**
 
-    1.  `push()`
+```javascript
+<NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : '')}>
+  About
+</NavLink>
+```
 
-    2.  `replace()`
+---
 
-  
+#### **7. How do you handle a 404 page in React Router?**
 
-    If you think of the history as an array of visited locations, `push()` will add a new location to the array and `replace()` will replace the current location in the array with the new one.
+**Answer:**  
+Use the wildcard `*` path to define a fallback route.  
+**Example:**
 
-  
+```javascript
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="*" element={<NotFound />} />
+</Routes>
+```
+
+---
+
+### **Intermediate-Level**
 
+#### **8. How do you use dynamic routing with React Router?**
+
+**Answer:**  
+Dynamic routing is achieved using route parameters with `:parameterName`.  
+**Example:**
 
+```javascript
+<Route path="/user/:id" element={<User />} />
 
-  
+// Access the parameter
+function User() {
+  const { id } = useParams();
+  return <div>User ID: {id}</div>;
+}
+```
 
-83. ### How do you programmatically navigate using React Router v4?
+---
 
-  
+#### **9. What is the `useNavigate` hook, and how is it used?**
 
-    There are three different ways to achieve programmatic routing/navigation within components.
+**Answer:**  
+The `useNavigate` hook allows programmatic navigation.  
+**Example:**
 
-  
+```javascript
+import { useNavigate } from 'react-router-dom';
 
-    1.  **Using the `withRouter()` higher-order function:**
+function Component() {
+  const navigate = useNavigate();
+  return <button onClick={() => navigate('/home')}>Go to Home</button>;
+}
+```
 
-  
+---
 
-        The `withRouter()` higher-order function will inject the history object as a prop of the component. This object provides `push()` and `replace()` methods to avoid the usage of context.
+#### **10. How do you pass data between routes in React Router?**
 
-  
+**Answer:**
 
-        ```jsx harmony
+1. **Via URL parameters:**
+    
+    ```javascript
+    <Route path="/user/:id" element={<User />} />
+    ```
+    
+2. **Via state in `Link`:**
+    
+    ```javascript
+    <Link to="/about" state={{ from: 'home' }}>About</Link>
+    ```
+    
+    Access state in the component:
+    
+    ```javascript
+    import { useLocation } from 'react-router-dom';
+    const location = useLocation();
+    console.log(location.state.from);
+    ```
+    
 
-        import { withRouter } from "react-router-dom"; // this also works with 'react-router-native'
+---
 
-  
+#### **11. What is the `Outlet` component used for?**
 
-        const Button = withRouter(({ history }) => (
+**Answer:**  
+The `Outlet` component renders child routes in nested routing.  
+**Example:**
 
-          <button
+```javascript
+<Route path="/dashboard" element={<Dashboard />}>
+  <Route path="stats" element={<Stats />} />
+</Route>
 
-            type="button"
+function Dashboard() {
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      <Outlet />
+    </div>
+  );
+}
+```
 
-            onClick={() => {
+---
 
-              history.push("/new-location");
+#### **12. How do you redirect in React Router?**
 
-            }}
+**Answer:**  
+Use the `Navigate` component or `useNavigate` hook.
 
-          >
+**Example: Using `Navigate`:**
 
-            {"Click Me!"}
+```javascript
+<Route path="/old-path" element={<Navigate to="/new-path" />} />
+```
 
-          </button>
+**Example: Using `useNavigate`:**
 
-        ));
+```javascript
+const navigate = useNavigate();
+navigate('/new-path');
+```
 
-        ```
+---
 
-  
+### **Advanced-Level**
 
-    2.  **Using `<Route>` component and render props pattern:**
+#### **13. What are lazy-loaded routes, and how do you implement them?**
 
-  
+**Answer:**  
+Lazy loading defers the loading of components until they are needed, improving performance.
 
-        The `<Route>` component passes the same props as `withRouter()`, so you will be able to access the history methods through the history prop.
+**Example:**
 
-  
+```javascript
+import { lazy, Suspense } from 'react';
+const About = lazy(() => import('./About'));
 
-        ```jsx harmony
+function App() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Suspense>
+  );
+}
+```
 
-        import { Route } from "react-router-dom";
+---
 
-  
+#### **14. How do you protect routes in React Router?**
 
-        const Button = () => (
+**Answer:**  
+Use a wrapper component to check authentication before rendering the route.  
+**Example:**
 
-          <Route
+```javascript
+function ProtectedRoute({ children }) {
+  const isAuthenticated = useAuth(); // Custom hook or logic
+  return isAuthenticated ? children : <Navigate to="/login" />;
+}
 
-            render={({ history }) => (
+// Usage
+<Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+```
 
-              <button
+---
 
-                type="button"
+#### **15. How can you prefetch data before rendering a route?**
 
-                onClick={() => {
+**Answer:**  
+Use a wrapper component to fetch data before rendering the desired component.  
+**Example:**
 
-                  history.push("/new-location");
+```javascript
+function DataLoader({ children }) {
+  const [data, setData] = useState(null);
 
-                }}
+  useEffect(() => {
+    fetch('/api/data').then((res) => res.json()).then(setData);
+  }, []);
 
-              >
+  if (!data) return <div>Loading...</div>;
+  return children;
+}
 
-                {"Click Me!"}
+<Route path="/data" element={<DataLoader><DataComponent /></DataLoader>} />
+```
 
-              </button>
+---
 
-            )}
+#### **16. What is the `useRoutes` hook?**
 
-          />
+**Answer:**  
+`useRoutes` allows you to define routes programmatically.
 
-        );
+**Example:**
 
-        ```
+```javascript
+const routes = useRoutes([
+  { path: '/', element: <Home /> },
+  { path: '/about', element: <About /> },
+]);
 
-  
+function App() {
+  return routes;
+}
+```
 
-    3.  **Using context:**
+---
 
-  
+#### **17. How do you handle query parameters in React Router?**
 
-        This option is not recommended and treated as unstable API.
+**Answer:**  
+Use the `useSearchParams` hook.
 
-  
+**Example:**
 
-        ```jsx harmony
+```javascript
+import { useSearchParams } from 'react-router-dom';
 
-        const Button = (props, context) => (
+function Component() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const query = searchParams.get('query');
 
-          <button
+  return (
+    <div>
+      Search Query: {query}
+      <button onClick={() => setSearchParams({ query: 'React' })}>Search React</button>
+    </div>
+  );
+}
+```
 
-            type="button"
+---
 
-            onClick={() => {
+#### **18. How do you create a custom hook for routing logic?**
 
-              context.history.push("/new-location");
+**Answer:**  
+**Example:**
 
-            }}
+```javascript
+function useAuthRedirect() {
+  const navigate = useNavigate();
+  const isAuthenticated = useAuth();
 
-          >
+  useEffect(() => {
+    if (!isAuthenticated) navigate('/login');
+  }, [isAuthenticated, navigate]);
+}
+```
 
-            {"Click Me!"}
+---
 
-          </button>
-
-        );
-
-  
-
-        Button.contextTypes = {
-
-          history: React.PropTypes.shape({
-
-            push: React.PropTypes.func.isRequired,
-
-          }),
-
-        };
-
-        ```
-
-  
-
-
-
-  
-
-84. ### How to get query parameters in React Router v4?
-
-  
-
-    The ability to parse query strings was taken out of React Router v4 because there have been user requests over the years to support different implementation. So the decision has been given to users to choose the implementation they like. The recommended approach is to use query strings library.
-
-  
-
-    ```javascript
-
-    const queryString = require("query-string");
-
-    const parsed = queryString.parse(props.location.search);
-
-    ```
-
-  
-
-    You can also use `URLSearchParams` if you want something native:
-
-  
-
-    ```javascript
-
-    const params = new URLSearchParams(props.location.search);
-
-    const foo = params.get("name");
-
-    ```
-
-  
-
-    You should use a _polyfill_ for IE11.
-
-  
-
-
-
-  
-
-85. ### Why you get "Router may have only one child element" warning?
-
-  
-
-    You have to wrap your Route's in a `<Switch>` block because `<Switch>` is unique in that it renders a route exclusively.
-
-  
-
-    At first you need to add `Switch` to your imports:
-
-  
-
-    ```javascript
-
-    import { Switch, Router, Route } from "react-router";
-
-    ```
-
-  
-
-    Then define the routes within `<Switch>` block:
-
-  
-
-    ```jsx harmony
-
-    <Router>
-
-      <Switch>
-
-        <Route {/* ... */} />
-
-        <Route {/* ... */} />
-
-      </Switch>
-
-    </Router>
-
-    ```
-
-  
-
-
-
-  
-
-86. ### How to pass params to `history.push` method in React Router v4?
-
-  
-
-    While navigating you can pass props to the `history` object:
-
-  
-
-    ```javascript
-
-    this.props.history.push({
-
-      pathname: "/template",
-
-      search: "?name=sudheer",
-
-      state: { detail: response.data },
-
-    });
-
-    ```
-
-  
-
-    The `search` property is used to pass query params in `push()` method.
-
-  
-
-
-
-  
-
-87. ### How to implement _default_ or _NotFound_ page?
-
-  
-
-    A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no path always matches. So you just need to simply drop path attribute as below
-
-  
-
-    ```jsx harmony
-
-    <Switch>
-
-      <Route exact path="/" component={Home} />
-
-      <Route path="/user" component={User} />
-
-      <Route component={NotFound} />
-
-    </Switch>
-
-    ```
-
-  
-
-
-
-  
-
-88. ### How to get history on React Router v4?
-
-  
-
-    Below are the list of steps to get history object on React Router v4,
-
-  
-
-    1.  Create a module that exports a `history` object and import this module across the project.
-
-  
-
-        For example, create `history.js` file:
-
-  
-
-        ```javascript
-
-        import { createBrowserHistory } from "history";
-
-  
-
-        export default createBrowserHistory({
-
-          /* pass a configuration object here if needed */
-
-        });
-
-        ```
-
-  
-
-    2.  You should use the `<Router>` component instead of built-in routers. Import the above `history.js` inside `index.js` file:
-
-  
-
-        ```jsx harmony
-
-        import { Router } from "react-router-dom";
-
-        import history from "./history";
-
-        import App from "./App";
-
-  
-
-        ReactDOM.render(
-
-          <Router history={history}>
-
-            <App />
-
-          </Router>,
-
-          holder
-
-        );
-
-        ```
-
-  
-
-    3.  You can also use push method of `history` object similar to built-in history object:
-
-  
-
-        ```javascript
-
-        // some-other-file.js
-
-        import history from "./history";
-
-  
-
-        history.push("/go-here");
-
-        ```
-
-  
-
-
-
-  
-
-89. ### How to perform automatic redirect after login?
-
-  
-
-    The `react-router` package provides `<Redirect>` component in React Router. Rendering a `<Redirect>` will navigate to a new location. Like server-side redirects, the new location will override the current location in the history stack.
-
-  
-
-    ```javascript
-
-    import { Redirect } from "react-router";
-
-  
-
-    export default function Login {
-
-        if (this.state.isLoggedIn === true) {
-
-          return <Redirect to="/your/redirect/page" />;
-
-        } else {
-
-          return <div>{"Login Please"}</div>;
-
-        }
-
-    }
-
-    ```
-
-  
-
-      <details><summary><b>See Class</b></summary>
-
-      <p>
-
-  
-
-    ```jsx
-
-    import React, { Component } from "react";
-
-    import { Redirect } from "react-router";
-
-  
-
-    export default class LoginComponent extends Component {
-
-      render() {
-
-        if (this.state.isLoggedIn === true) {
-
-          return <Redirect to="/your/redirect/page" />;
-
-        } else {
-
-          return <div>{"Login Please"}</div>;
-
-        }
-
-      }
-
-    }
-
-    ```
-
-  
-
-       </p>
-
-       </details>
-
-  
-
+Let me know if you'd like examples expanded or additional questions!
